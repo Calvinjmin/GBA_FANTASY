@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: fixed;
     background-color: #00a1f1;
     text-align: center;
     width: 100%;
@@ -42,16 +41,38 @@
   <h1 style = "font-family:georgia,garamond,serif;font-size:45px;color:#ffffff;line height:0px"> GBA Fantasy </h1>
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Log-In</a></li>
+    <!-- <li><a href="login.html">Log-In</a></li> -->
     <li><a href="players.html">Add Players</a></li>
     <li><a href="stats.html">Add Statistics</a></li>
   </ul>
-    <br><br><br><br>
-  <h1 style="color:#FFFFFF">Input Statistics</h1>
+    <br><br>
+  <h2 style="color:#FFFFFF; margin-top: 0px; margin-bottom: 0px">Input Statistics</h2>
 
   <form id="statsForm" action="/action_page.php">
     Last Name, First Name: <input type="text" name="playerName"><br>
-    <input type="button" value="Submit">
+    Game Date (MM/DD/YYYY): <input type="text" name="dateOfGame"><br>
+    Points: <input type="number" min = 0 max = 150 name="points"> <br>
+    Assists: <input type="number" min = 0 max = 150 name="ass"> <br>
+    Rebounds: <input type="number" min = 0 max = 150 name="reb"> <br>
+    BM Points: <input type="number" min = 0 max = 150 name="bm"> <br>
+    <input type="button" value="Submit" onclick="logStatistics()">
   </form>
+
+  <p id="confirm"></p>
+
+  <script language ="javascript">
+    function logStatistics() {
+      var playerInfo = document.getElementById( "statsForm" );
+      var player = playerInfo.elements[0].value;
+      var points = playerInfo.elements[1].value;
+      var assists = playerInfo.elements[2].value;
+      var rebounds = playerInfo.elements[3].value;
+      var bm = playerInfo.elements[4].value;
+      console.log( "Player Name: " + player + "\nPoints: " + points + "\nAssists " 
+                              + assists + "\nRebounds " + rebounds + "\nBM Points " + bm);
+      document.getElementById("confirm").innerHTML = "You have submitted stats into the GBA Fantasy Database!";
+    }
+  
+  </script>
 
 </html>

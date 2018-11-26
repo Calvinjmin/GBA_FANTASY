@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: fixed;
     background-color: #00a1f1;
     text-align: center;
     width: 100%;
@@ -39,15 +38,15 @@
       font-weight: bold;
     }
   </style>
-  <h1 style = "font-family:georgia,garamond,serif;font-size:45px;color:#ffffff;line height:0px"> GBA Fantasy </h1>
+  <h1 style = "font-family:georgia,garamond,serif;font-size:45px;color:#ffffff;"> GBA Fantasy </h1>
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Log-In</a></li>
+    <!-- <li><a href="login.html">Log-In</a></li> -->
     <li><a href="players.html">Add Players</a></li>
     <li><a href="stats.html">Add Statistics</a></li>
   </ul>
-  <br><br><br><br>
-  <h1 style="color:#FFFFFF">Input Player Information</h1>
+    <br><br>
+  <h2 style="color:#FFFFFF; margin-top: 0px; margin-bottom:0px">Input Player Information</h2>
 
   <form id="playerForm" action="/action_page.php">
     First name: <input type="text" name="fname"><br>
@@ -56,23 +55,27 @@
     Team: <input type="text" name="team"><br><br>
     <input type="button" onclick="inputPlayer()" value="Submit">
   </form>
+  
+  <p id = "test"></p>
 
   <script language="javascript">
         function writeToFileCSV( form ) {
-        var fso = new ActiveXObject("Scripting.FileSystemObject");
-        var fileLoc = "/Volumes/CALVIN MIN/GBA_FANTASY/data/playerData.txt";
-        var file  = fso.OpenTextFile( fileLoc , 8 , true , 0 );
-        file.writeline( form.fname.value + ',' + form.lname.value);
+		
+        //var fso = new ActiveXObject("Scripting.FileSystemObject");
+        var fileLoc = "E:\GBA_FANTASY\data\test.txt";
+		    var file = new File( txtFile );
+        var file  = fso.OpenTextFile( fileLoc , 8 );
+        file.writeline( form.fname.value + ',' + form.lname.value );
         file.Close();
 
-        /*
+		/*
         var txt = new ActiveXObject("Scripting.FileSystemObject");
         var s = txt.CreateTextFile("11.txt", true);
         s.WriteLine('Hello');
         s.Close();
-        */
-
+        
         alert('File created successfully at location: ' + fileLoc );
+		*/
       }
   </script>
 
@@ -81,10 +84,11 @@
     var player = document.getElementById( "playerForm" );
     var textTest = "";
     var i = 0;
-      for ( i = 0; i < player.length - 1 ; i++ ) {
-        textTest += player.elements[i].value + "<br>";
+	  textTest = player.elements[0].value;
+      for ( i = 1; i < player.length - 1 ; i++ ) {
+        textTest += "," + player.elements[i].value;
       }
-    console.log("test");
+    console.log(textTest);
     document.getElementById("test").innerHTML = textTest;
     }
   </script>
