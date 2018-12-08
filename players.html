@@ -49,48 +49,40 @@
   <h2 style="color:#FFFFFF; margin-top: 0px; margin-bottom:0px">Input Player Information</h2>
 
   <form id="playerForm" action="/action_page.php">
-    First name: <input type="text" name="fname"><br>
-    Last name: <input type="text" name="lname"><br>
-    Height: <input type="text" name="height"><br>
-    Team: <input type="text" name="team"><br><br>
-    <input type="button" onclick="inputPlayer()" value="Submit">
+    First name: <input type="text" name="fname" id = "f"><br>
+    Last name: <input type="text" name="lname" id = "l"><br>
+    Height: <input type="text" name="height" id = "h"><br>
+    Team: <input type="text" name="team" id = "t"><br><br>
+	<span id = link><a><button type="submit"id="submit-form" onclick = "inputPlayer()">Submit</button></a></span>
   </form>
   
   <p id = "test"></p>
-
-  <script language="javascript">
-        function writeToFileCSV( form ) {
-		
-        //var fso = new ActiveXObject("Scripting.FileSystemObject");
-        var fileLoc = "E:\GBA_FANTASY\data\test.txt";
-		    var file = new File( txtFile );
-        var file  = fso.OpenTextFile( fileLoc , 8 );
-        file.writeline( form.fname.value + ',' + form.lname.value );
-        file.Close();
-
-		/*
-        var txt = new ActiveXObject("Scripting.FileSystemObject");
-        var s = txt.CreateTextFile("11.txt", true);
-        s.WriteLine('Hello');
-        s.Close();
-        
-        alert('File created successfully at location: ' + fileLoc );
-		*/
-      }
-  </script>
-
   <script>
+  document.getElementById("f").addEventListener("mouseover", inputPlayer);
+  document.getElementById("l").addEventListener("mouseover", inputPlayer);
+  document.getElementById("h").addEventListener("mouseover", inputPlayer);
+  document.getElementById("t").addEventListener("mouseover", inputPlayer);
+  document.getElementById("f").addEventListener("mouseout", inputPlayer);
+  document.getElementById("l").addEventListener("mouseout", inputPlayer);
+  document.getElementById("h").addEventListener("mouseout", inputPlayer);
+  document.getElementById("t").addEventListener("mouseout", inputPlayer);
+  document.getElementById("submit-form").addEventListener("mouseout", inputPlayer);
+  document.getElementById("submit-form").addEventListener("mouseout", inputPlayer);
   function inputPlayer() {
     var player = document.getElementById( "playerForm" );
-    var textTest = "";
-    var i = 0;
-	  textTest = player.elements[0].value;
-      for ( i = 1; i < player.length - 1 ; i++ ) {
-        textTest += "," + player.elements[i].value;
-      }
-    console.log(textTest);
-    document.getElementById("test").innerHTML = textTest;
-    }
+    var textTest = "https://script.google.com/macros/s/AKfycbyVW6oOUNiSrqZneU9L3WYZ6R28Tcfy32myHMv4gGOFImmxc7M/exec?fname=";
+    textTest += player.elements[0].value + "&";
+	textTest += "lname=";
+	textTest += player.elements[1].value+ "&";
+	textTest += "height=";
+	textTest += player.elements[2].value+ "&";
+	textTest += "team=";
+	textTest += player.elements[3].value;
+    //console.log(textTest);
+    //document.getElementById("test").innerHTML = textTest;
+	document.getElementById('link').innerHTML = '<a href="' + textTest + '" target = "_blank"><button type="submit"id="submit-form" onclick = "inputPlayer()">Submit</button></a>';
+   }
   </script>
+
 
 </html>
