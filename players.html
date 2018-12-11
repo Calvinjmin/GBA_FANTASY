@@ -68,7 +68,7 @@
 	textTest += "lname=";
 	textTest += player.elements[1].value+ "&";
 	textTest += "height=";
-	textTest += player.elements[2].value+ "&";
+	textTest += (player.elements[2].value+ "&").replace("\"", "");
 	textTest += "team=";
 	textTest += player.elements[3].value;
     //console.log(textTest);
