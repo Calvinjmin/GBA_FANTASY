@@ -54,12 +54,12 @@
     Points: <input type="number" min = 0 max = 150 name="points"> <br>
     Assists: <input type="number" min = 0 max = 150 name="ass"> <br>
     Rebounds: <input type="number" min = 0 max = 150 name="reb"> <br>
-    BM Points: <input type="number" min = 0 max = 150 name="bm"> <br>
-    <input type="button" value="Submit" onclick="logStatistics()">
+    BM Points: <input type="number" min = 0 max = 150 name="bm" id = "bm_points"> <br>
+    <span id = link><a><button type="submit"id="submit-form" onclick = "inputStats()">Submit</button></a></span>
   </form>
 
   <p id="confirm"></p>
-
+<!--
   <script language ="javascript">
     function logStatistics() {
       var playerInfo = document.getElementById( "statsForm" );
@@ -74,5 +74,26 @@
     }
   
   </script>
+  -->
+  <script>
+	   document.getElementById("bm_points").addEventListener("mouseleave", inputStats());
+	   document.getElementById("submit-form").addEventListener("mouseenter", inputStats());
+	   function inputStats() {
+		var stats = document.getElementById( "statsForm" );
+		var textTest = "https://script.google.com/macros/s/AKfycbwypINwih1jYxTokHY7L5Q5phDGUcvwXpyjoGWE3BVf_U-8SwQ/exec?playerName=";
+		textTest += stats.elements[0].value + "&";
+		textTest += "dateOfGame=";
+		textTest += stats.elements[1].value+ "&";
+		textTest += "points=";
+		textTest += stats.elements[2].value+ "&";
+		textTest += "ass=";
+		textTest += stats.elements[3].value + "&";
+		textTest += "reb=";
+		textTest += stats.elements[4].value+ "&";
+		textTest += "bm=";
+		textTest += stats.elements[5].value;		
+		document.getElementById('link').innerHTML = '<a href="' + textTest + '" target = "_blank"><button type="submit"id="submit-form" onclick = "inputStats()">Submit</button></a>';
+	   }
+   </script>
 
 </html>
