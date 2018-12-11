@@ -49,11 +49,11 @@
   <h2 style="color:#FFFFFF; margin-top: 0px; margin-bottom: 0px">Input Statistics</h2>
 
   <form id="statsForm" action="/action_page.php">
-    Last Name, First Name: <input type="text" name="playerName"><br>
-    Game Date (MM/DD/YYYY): <input type="text" name="dateOfGame"><br>
-    Points: <input type="number" min = 0 max = 150 name="points"> <br>
-    Assists: <input type="number" min = 0 max = 150 name="ass"> <br>
-    Rebounds: <input type="number" min = 0 max = 150 name="reb"> <br>
+    Last Name, First Name: <input type="text" name="playerName" id = "name"><br>
+    Game Date (MM/DD/YYYY): <input type="text" name="dateOfGame" id = "date"><br>
+    Points: <input type="number" min = 0 max = 150 name="points" id = "points"> <br>
+    Assists: <input type="number" min = 0 max = 150 name="ass" id = "ass"> <br>
+    Rebounds: <input type="number" min = 0 max = 150 name="reb" id = "reb"> <br>
     BM Points: <input type="number" min = 0 max = 150 name="bm" id = "bm_points"> <br>
     <span id = link><a><button type="submit"id="submit-form" onclick = "inputStats()">Submit</button></a></span>
   </form>
@@ -76,8 +76,10 @@
   </script>
   -->
   <script>
-	   document.getElementById("bm_points").addEventListener("mouseleave", inputStats());
-	   document.getElementById("submit-form").addEventListener("mouseenter", inputStats());
+	   document.getElementById("bm_points").addEventListener("mouseout", inputStats);
+	   document.getElementById("bm_points").addEventListener("mouseleave", inputStats);
+	   document.getElementById("submit-form").addEventListener("mouseenter", inputStats);
+	   document.getElementById("submit-form").addEventListener("mouseover", inputStats);
 	   function inputStats() {
 		var stats = document.getElementById( "statsForm" );
 		var textTest = "https://script.google.com/macros/s/AKfycbwypINwih1jYxTokHY7L5Q5phDGUcvwXpyjoGWE3BVf_U-8SwQ/exec?playerName=";
