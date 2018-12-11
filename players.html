@@ -58,16 +58,9 @@
   
   <p id = "test"></p>
   <script>
-  document.getElementById("f").addEventListener("mouseover", inputPlayer);
-  document.getElementById("l").addEventListener("mouseover", inputPlayer);
-  document.getElementById("h").addEventListener("mouseover", inputPlayer);
-  document.getElementById("t").addEventListener("mouseover", inputPlayer);
-  document.getElementById("f").addEventListener("mouseout", inputPlayer);
-  document.getElementById("l").addEventListener("mouseout", inputPlayer);
-  document.getElementById("h").addEventListener("mouseout", inputPlayer);
   document.getElementById("t").addEventListener("mouseout", inputPlayer);
-  document.getElementById("submit-form").addEventListener("mouseout", inputPlayer);
-  document.getElementById("submit-form").addEventListener("mouseout", inputPlayer);
+  document.getElementById("submit-form").addEventListener("mouseenter", inputPlayer);
+  document.getElementById("submit-form").addEventListener("mouseover", inputPlayer);
   function inputPlayer() {
     var player = document.getElementById( "playerForm" );
     var textTest = "https://script.google.com/macros/s/AKfycbyVW6oOUNiSrqZneU9L3WYZ6R28Tcfy32myHMv4gGOFImmxc7M/exec?fname=";
