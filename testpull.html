@@ -36,7 +36,6 @@
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
-		console.log(populateSheet(response.result));
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
@@ -71,9 +70,9 @@
     }
 
     function updateSignInStatus(isSignedIn) {
-        if (isSignedIn) {
-			makeApiCall();
-		}
+      if (isSignedIn) {
+        makeApiCall();
+      }
     }
 
     function handleSignInClick(event) {
@@ -83,16 +82,6 @@
     function handleSignOutClick(event) {
       gapi.auth2.getAuthInstance().signOut();
     }
-	
-	function populateSheet(result) {
-	var x = 0;
-	const max = 8;
-		for(var row=1; row<max; row++) {				
-				x += result.values[row][2];
-		}
-	return (x / (max - 1));
-	}
-	
     </script>
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
@@ -100,6 +89,5 @@
     </script>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-
   </body>
 </html>
