@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Stats</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+
+  <header>
+    <h1>Gainesville Basketball Association Fantasy League</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <!-- <li><a href="login.html">Log-In</a></li> -->
+      <li><a href="players.html">Add Players</a></li>
+      <li><a href="stats.html">Add Statistics</a></li>
+        <li><a href="data.html">Player Data</a></li>
+      <li><a href="scoringTemplate.html">Scoring Template</a></li>
+    </ul>
+  </nav>
+
+<main>
+
+  <h2>Input Statistics</h2>
+
+  <form id="statsForm" action="/action_page.php">
+    Last Name, First Name: <input type="text" name="playerName" id = "name"><br>
+    Game Date (MM/DD/YYYY): <input type="text" name="dateOfGame" id = "date"><br>
+    Points: <input type="number" min = 0 max = 150 name="points" id = "points"> <br>
+    Assists: <input type="number" min = 0 max = 150 name="ass" id = "ass"> <br>
+    Rebounds: <input type="number" min = 0 max = 150 name="reb" id = "reb"> <br>
+    BM Points: <input type="number" min = 0 max = 150 name="bm" id = "bm_points"> <br>
+    <span id = link><a><button type="submit"id="submit-form" onclick = "inputStats()">Submit</button></a></span>
+  </form>
+
+  <p id="confirm"></p>
+<!--
+  <script language ="javascript">
+    function logStatistics() {
+      var playerInfo = document.getElementById( "statsForm" );
+      var player = playerInfo.elements[0].value;
+      var points = playerInfo.elements[1].value;
+      var assists = playerInfo.elements[2].value;
+      var rebounds = playerInfo.elements[3].value;
+      var bm = playerInfo.elements[4].value;
+      console.log( "Player Name: " + player + "\nPoints: " + points + "\nAssists " 
+                              + assists + "\nRebounds " + rebounds + "\nBM Points " + bm);
+      document.getElementById("confirm").innerHTML = "You have submitted stats into the GBA Fantasy Database!";
+    }
+  
+  </script>
+  -->
+  <script>
+	   document.getElementById("bm_points").addEventListener("mouseout", inputStats);
+	   document.getElementById("bm_points").addEventListener("mouseleave", inputStats);
+	   document.getElementById("submit-form").addEventListener("mouseenter", inputStats);
+	   document.getElementById("submit-form").addEventListener("mouseover", inputStats);
+	   function inputStats() {
+		var stats = document.getElementById( "statsForm" );
+		var textTest = "https://script.google.com/macros/s/AKfycbwypINwih1jYxTokHY7L5Q5phDGUcvwXpyjoGWE3BVf_U-8SwQ/exec?playerName=";
+		textTest += stats.elements[0].value + "&";
+		textTest += "dateOfGame=";
+		textTest += stats.elements[1].value+ "&";
+		textTest += "points=";
+		textTest += stats.elements[2].value+ "&";
+		textTest += "ass=";
+		textTest += stats.elements[3].value + "&";
+		textTest += "reb=";
+		textTest += stats.elements[4].value+ "&";
+		textTest += "bm=";
+		textTest += stats.elements[5].value;		
+		document.getElementById('link').innerHTML = '<a href="' + textTest + '" target = "_blank"><button type="submit"id="submit-form" onclick = "inputStats()">Submit</button></a>';
+	   }
+   </script>
+
+   </body>
+</main>
+
+</html>

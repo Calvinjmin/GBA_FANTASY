@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Login</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+<header>
+    <h1>Gainesville Basketball Association Fantasy League</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <!-- <li><a href="login.html">Log-In</a></li> -->
+      <li><a href="players.html">Add Players</a></li>
+      <li><a href="stats.html">Add Statistics</a></li>
+        <li><a href="data.html">Player Data</a></li>
+      <li><a href="scoringTemplate.html">Scoring Template</a></li>
+    </ul>
+  </nav>
+
+<main>
+<h1>Log In</h1>
+
+<form id="playerForm" action="/action_page.php">
+  Username: <input type="text" name="username"><br>
+  Password: <input type="password" name="password"><br>
+  <input type="button" onclick="inputPlayer()" value="Login">
+</form>
+</main>
+
+</body>
+</html>
