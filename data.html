@@ -95,19 +95,31 @@
   -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="p5.js" type="text/javascript"></script>
-
+   <p id = "p1">"getData()"</p>
    <script type="text/javascript" language="javascript">
 		const prefix = "https://spreadsheets.google.com/feeds/list/";
 		const sheetId = "1Y4-AdSJEb1q8eRClrCRwYhaV8S2qL-k2p-iY1XSqUrI";
 		const postFix = "/od6/public/values?alt=json";
 		const spreadsheetUrl = prefix + sheetId + postFix;
-		
 		$.getJSON(spreadsheetUrl, function(data){
 			console.log(data);
+			var i;
+			var text = "";
+			for (i = 0; i < data.feed.entry.length; i++) { 
+				text += data.feed.entry[i].gsx$playername.$t + " ";
+				text += data.feed.entry[i].gsx$dateofgame.$t + " ";
+				text += data.feed.entry[i].gsx$points.$t + " ";
+				text += data.feed.entry[i].gsx$reb.$t + " ";
+				text += data.feed.entry[i].gsx$ass.$t + " ";
+				text += data.feed.entry[i].gsx$bm.$t + "\n";
+			}
+			
+			console.log(text);
+			document.getElementById("p1").innerHTML = text;
 		});
 	</script>
 
-
+<!--
 	<script>
 		var x = 0;
 
@@ -140,6 +152,6 @@ function draw() {
     x = 0;
   }
 }
-
+-->
 	</script>
 </html>
