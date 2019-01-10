@@ -1,49 +1,27 @@
 <html>
-<style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #00a1f1;
-      text-align: center;
-      width: 100%;
-      display: inline-block;
-
-    }
-
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      background-color: #7cbb00;
-    }
-	  body {
-	    background-color: #737373
-	  }
-
-    div maincontainer {
-      text-align: center;
-    }
-    </style>
-
   <head>
-      <body>
-  <h1 style = "font-family: georgia, garamond,serif; font-size:45px; Color:#FFFFFF;
-                 margin-bottom:0px; allign:center ">Gainesville Basketball Association Fantasy League</h1>
-
-  </body>
+    <title>Data</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
   </head>
   <body>
+
+  <header>
+    <h1>Gainesville Basketball Association Fantasy League</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <!-- <li><a href="login.html">Log-In</a></li> -->
+      <li><a href="players.html">Add Players</a></li>
+      <li><a href="stats.html">Add Statistics</a></li>
+        <li><a href="data.html">Player Data</a></li>
+      <li><a href="scoringTemplate.html">Scoring Template</a></li>
+    </ul>
+  </nav>
+
+  <main>
     <!--
     BEFORE RUNNING:
     ---------------
@@ -139,7 +117,7 @@
    <script src="p5.js" type="text/javascript"></script>
    <!--<p id = "p1">"getData()"</p>-->
    
-   <table style="width:100%">
+   <table>
   <tr>
     <th>Name</th>
     <th>Points</th> 
@@ -405,5 +383,6 @@ function draw() {
   }
 }
 -->
-
+</main>
+  </body>
 </html>

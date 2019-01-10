@@ -1,55 +1,29 @@
 <html>
-  <style>
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #00a1f1;
-    text-align: center;
-    width: 100%;
-    display: inline-block;
+<head>
+  <title>Players</title>
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+</head>
 
-  }
+<body>
 
-  li {
-    float: left;
-  }
+<header>
+    <h1>Gainesville Basketball Association Fantasy League</h1>
+  </header>
 
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <!-- <li><a href="login.html">Log-In</a></li> -->
+      <li><a href="players.html">Add Players</a></li>
+      <li><a href="stats.html">Add Statistics</a></li>
+        <li><a href="data.html">Player Data</a></li>
+      <li><a href="scoringTemplate.html">Scoring Template</a></li>
+    </ul>
+  </nav>
 
-  li a:hover {
-    background-color: #7cbb00;
-  }
-    body {
-      background-color: #737373
-    }
-    h1 {
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 0;
-      margin-right: 0;
-      font-weight: bold;
-    }
-  </style>
-  <h1 style = "font-family: georgia, garamond,serif; font-size:45px; color:#ffffff;
-                 margin-bottom:0px; allign:center ">Gainesville Basketball Association Fantasy League</h1>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <!-- <li><a href="login.html">Log-In</a></li> -->
-    <li><a href="players.html">Add Players</a></li>
-    <li><a href="stats.html">Add Statistics</a></li>
-    <li><a href="data.html">Player Data</a></li>
-    <li><a href="scoringTemplate.html">Scoring Template</a></li>
-  </ul>
-    <br><br>
-  <h2 style="color:#FFFFFF; margin-top: 0px; margin-bottom:0px">Input Player Information</h2>
+  <main>
+  <h2>Input Player Information</h2>
 
   <form id="playerForm" action="/action_page.php">
     First name: <input type="text" name="fname" id = "f"><br>
@@ -79,6 +53,7 @@
 	document.getElementById('link').innerHTML = '<a href="' + textTest + '" target = "_blank"><button type="submit"id="submit-form" onclick = "inputPlayer()">Submit</button></a>';
    }
   </script>
-
+</main>
+</body>
 
 </html>
