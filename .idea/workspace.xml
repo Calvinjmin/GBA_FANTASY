@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="98866015-7ad3-4dc6-ac36-d4947c352d39" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="98866015-7ad3-4dc6-ac36-d4947c352d39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/playerEfficiencyFormula" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/players.html" beforeDir="false" afterPath="$PROJECT_DIR$/players.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoringTemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/scoringTemplate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/stats.html" afterDir="false" />
+    </list>
+>>>>>>> projections
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,11 +22,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="494">
               <caret line="208" selection-start-line="208" selection-end-line="208" />
+=======
+            <state relative-caret-position="554">
+              <caret line="222" selection-start-line="222" selection-end-line="222" />
+>>>>>>> projections
               <folding>
                 <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
@@ -34,8 +51,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-127">
               <caret line="356" column="13" selection-start-line="356" selection-start-column="13" selection-end-line="356" selection-end-column="13" />
+=======
+            <state relative-caret-position="569">
+              <caret line="407" selection-start-line="407" selection-end-line="407" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> projections
             </state>
           </provider>
         </entry>
@@ -43,8 +68,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/players.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="600">
               <caret line="40" column="99" selection-start-line="40" selection-start-column="99" selection-end-line="40" selection-end-column="99" />
+=======
+            <state relative-caret-position="615">
+              <caret line="41" column="106" selection-start-line="41" selection-start-column="106" selection-end-line="41" selection-end-column="106" />
+>>>>>>> projections
               <folding>
                 <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -56,7 +86,11 @@
         <entry file="file://$PROJECT_DIR$/stats.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="466">
+<<<<<<< HEAD
               <caret line="40" column="114" selection-start-line="40" selection-start-column="114" selection-end-line="40" selection-end-column="114" />
+=======
+              <caret line="41" column="106" selection-start-line="41" selection-start-column="106" selection-end-line="41" selection-end-column="106" />
+>>>>>>> projections
               <folding>
                 <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -68,12 +102,25 @@
         <entry file="file://$PROJECT_DIR$/scoringTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="569">
+<<<<<<< HEAD
               <caret line="106" selection-start-line="106" selection-end-line="106" />
+=======
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
+>>>>>>> projections
               <folding>
                 <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/playerEfficiencyFormula">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -93,10 +140,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/players.html" />
         <option value="$PROJECT_DIR$/stats.html" />
         <option value="$PROJECT_DIR$/scoringTemplate.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/data.html" />
+        <option value="$PROJECT_DIR$/playerEfficiencyFormula" />
       </list>
     </option>
   </component>
@@ -130,7 +179,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547146670970" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547146554892" />
+>>>>>>> projections
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -224,15 +277,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-127">
           <caret line="356" column="13" selection-start-line="356" selection-start-column="13" selection-end-line="356" selection-end-column="13" />
+=======
+        <state relative-caret-position="569">
+          <caret line="407" selection-start-line="407" selection-end-line="407" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="222" selection-start-line="222" selection-end-line="222" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#table#1;n#html#0;n#!!top" />
+            <element signature="n#table#2;n#html#0;n#!!top" />
+          </folding>
+>>>>>>> projections
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/players.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="600">
           <caret line="40" column="99" selection-start-line="40" selection-start-column="99" selection-end-line="40" selection-end-column="99" />
+=======
+        <state relative-caret-position="615">
+          <caret line="41" column="106" selection-start-line="41" selection-start-column="106" selection-end-line="41" selection-end-column="106" />
+>>>>>>> projections
           <folding>
             <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -242,7 +320,11 @@
     <entry file="file://$PROJECT_DIR$/stats.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
+<<<<<<< HEAD
           <caret line="40" column="114" selection-start-line="40" selection-start-column="114" selection-end-line="40" selection-end-column="114" />
+=======
+          <caret line="41" column="106" selection-start-line="41" selection-start-column="106" selection-end-line="41" selection-end-column="106" />
+>>>>>>> projections
           <folding>
             <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -252,7 +334,11 @@
     <entry file="file://$PROJECT_DIR$/scoringTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
+<<<<<<< HEAD
           <caret line="106" selection-start-line="106" selection-end-line="106" />
+=======
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+>>>>>>> projections
           <folding>
             <element signature="n#style#0;n#h1#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#1;n#html#0;n#!!top" expanded="true" />
@@ -261,8 +347,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/playerEfficiencyFormula">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="494">
           <caret line="208" selection-start-line="208" selection-end-line="208" />
           <folding>
@@ -277,6 +364,10 @@
             <element signature="n#tr#3;n#table#2;n#html#0;n#!!top" />
             <element signature="n#tr#4;n#table#2;n#html#0;n#!!top" />
           </folding>
+=======
+        <state relative-caret-position="75">
+          <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
+>>>>>>> projections
         </state>
       </provider>
     </entry>
