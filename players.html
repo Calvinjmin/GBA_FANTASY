@@ -29,8 +29,10 @@
     First name: <input type="text" name="fname" id = "f"><br>
     Last name: <input type="text" name="lname" id = "l"><br>
     Height: <input type="text" name="height" id = "h"><br>
-    Team: <input type="text" name="team" id = "t"><br><br>
-	<span id = link><a><button type="submit"id="submit-form" onclick = "inputPlayer()">Submit</button></a></span>
+    Team: <input type="text" name="team" id = "t">
+    <br>
+	<span id = link><a><button type="submit" id="submit-form" onclick = "clickedSubmit();">Submit</button></a></span>
+
   </form>
   
   <p id = "test"></p>
@@ -38,6 +40,20 @@
   document.getElementById("t").addEventListener("mouseout", inputPlayer);
   document.getElementById("submit-form").addEventListener("mouseenter", inputPlayer);
   document.getElementById("submit-form").addEventListener("mouseover", inputPlayer);
+  
+  // function clickedSubmit()
+  // {
+  //   var user_choice = window.confirm('Are you sure you want to submit?');
+  //   if(user_choice==true) 
+  //   {
+  //     inputPlayer();
+  //   } 
+  //   else 
+  //   {
+  //   return false;
+  //   }
+  // }
+
   function inputPlayer() {
     var player = document.getElementById( "playerForm" );
     var textTest = "https://script.google.com/macros/s/AKfycbyVW6oOUNiSrqZneU9L3WYZ6R28Tcfy32myHMv4gGOFImmxc7M/exec?fname=";
