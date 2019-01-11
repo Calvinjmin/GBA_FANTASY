@@ -192,7 +192,6 @@
 		const postFix = "/od6/public/values?alt=json";
 		const spreadsheetUrl = prefix + sheetId + postFix;
 		var arr = new Array();
-		var good = "good";
 		$.getJSON(spreadsheetUrl, function(data){
 			console.log(data);
 			var i;
@@ -239,7 +238,7 @@
 					if(arr[x][5] == points){
 						document.getElementById("A" + i).innerHTML = arr[x][0];
 						document.getElementById("B" + i).src = "images/" + (arr[x][0].replace(", ", "")).toLowerCase() + ".png";
-						console.log("images/" + (arr[x][0].replace(", ", "")).toLowerCase() + ".png");
+						console.log(document.getElementById("B" + i).src);
 						document.getElementById("C" + i).innerHTML = (arr[x][1] / arr[x][6]).toFixed(1) + "";
 						document.getElementById("D" + i).innerHTML = (arr[x][2] / arr[x][6]).toFixed(1) + "";
 						document.getElementById("E" + i).innerHTML = (arr[x][3] / arr[x][6]).toFixed(1) + "";
