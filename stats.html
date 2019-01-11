@@ -1,38 +1,60 @@
 <html>
-  <head>
-    <title>Stats</title>
-    <link rel="stylesheet" href="css/main.css">
-    <meta charset="UTF-8">
-  </head>
+  <style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00a1f1;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
 
-  <body>
+  }
 
-  <header>
-    <h1>Gainesville Basketball Association Fantasy League</h1>
-  </header>
+  li {
+    float: left;
+  }
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <!-- <li><a href="login.html">Log-In</a></li> -->
-      <li><a href="players.html">Add Players</a></li>
-      <li><a href="stats.html">Add Statistics</a></li>
-        <li><a href="data.html">Player Data</a></li>
-      <li><a href="scoringTemplate.html">Scoring Template</a></li>
-    </ul>
-  </nav>
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 
-<main>
-
-  <h2>Input Statistics</h2>
+  li a:hover {
+    background-color: #7cbb00;
+  }
+    body {
+      background-color: #737373
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+    }
+  </style>
+  <h1 style = "font-family:georgia,garamond,serif;font-size:45px;color:#ffffff;line height:0px"> GBA Fantasy </h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <!-- <li><a href="login.html">Log-In</a></li> -->
+    <li><a href="players.html">Add Players</a></li>
+    <li><a href="stats.html">Add Statistics</a></li>
+  </ul>
+    <br><br>
+  <h2 style="color:#FFFFFF; margin-top: 0px; margin-bottom: 0px">Input Statistics</h2>
 
   <form id="statsForm" action="/action_page.php">
-    Last Name, First Name: <input type="text" name="playerName" id = "name"><br>
-    Game Date (MM/DD/YYYY): <input type="text" name="dateOfGame" id = "date"><br>
-    Points: <input type="number" min = 0 max = 150 name="points" id = "points"> <br>
-    Assists: <input type="number" min = 0 max = 150 name="ass" id = "ass"> <br>
-    Rebounds: <input type="number" min = 0 max = 150 name="reb" id = "reb"> <br>
-    BM Points: <input type="number" min = 0 max = 150 name="bm" id = "bm_points"> <br>
+    Last Name, First Name: <input type="text" name="playerName" id = "name" onchange="inputStats()"><br>
+    Game Date (MM/DD/YYYY): <input type="text" name="dateOfGame" id = "date" onchange="inputStats()"><br>
+    Points: <input type="number" min = 0 max = 150 name="points" id = "points" onchange="inputStats()"> <br>
+    Assists: <input type="number" min = 0 max = 150 name="ass" id = "ass" onchange="inputStats()"> <br>
+    Rebounds: <input type="number" min = 0 max = 150 name="reb" id = "reb" onchange="inputStats()"> <br>
+    BM Points: <input type="number" min = 0 max = 150 name="bm" id = "bm_points" onchange="inputStats()"> <br>
     <span id = link><a><button type="submit"id="submit-form" onclick = "inputStats()">Submit</button></a></span>
   </form>
 
@@ -54,6 +76,10 @@
   </script>
   -->
   <script>
+	   document.getElementById("points").addEventListener("keyup", inputStats);
+	   document.getElementById("bm_points").addEventListener("keyup", inputStats);
+	   document.getElementById("points").addEventListener("mouseout", inputStats);
+	   document.getElementById("points").addEventListener("mouseleave", inputStats);
 	   document.getElementById("bm_points").addEventListener("mouseout", inputStats);
 	   document.getElementById("bm_points").addEventListener("mouseleave", inputStats);
 	   document.getElementById("submit-form").addEventListener("mouseenter", inputStats);
@@ -75,8 +101,5 @@
 		document.getElementById('link').innerHTML = '<a href="' + textTest + '" target = "_blank"><button type="submit"id="submit-form" onclick = "inputStats()">Submit</button></a>';
 	   }
    </script>
-
-   </body>
-</main>
 
 </html>

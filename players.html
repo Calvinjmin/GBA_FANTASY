@@ -1,59 +1,72 @@
 <html>
-<head>
-  <title>Players</title>
-  <link rel="stylesheet" href="css/main.css">
-  <meta charset="UTF-8">
-</head>
+  <style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00a1f1;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
 
-<body>
+  }
 
-<header>
-    <h1>Gainesville Basketball Association Fantasy League</h1>
-  </header>
+  li {
+    float: left;
+  }
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <!-- <li><a href="login.html">Log-In</a></li> -->
-      <li><a href="players.html">Add Players</a></li>
-      <li><a href="stats.html">Add Statistics</a></li>
-        <li><a href="data.html">Player Data</a></li>
-      <li><a href="scoringTemplate.html">Scoring Template</a></li>
-    </ul>
-  </nav>
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 
-  <main>
-  <h2>Input Player Information</h2>
+  li a:hover {
+    background-color: #7cbb00;
+  }
+    body {
+      background-color: #737373
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+    }
+  </style>
+  <h1 style = "font-family:georgia,garamond,serif;font-size:45px;color:#ffffff;"> GBA Fantasy </h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <!-- <li><a href="login.html">Log-In</a></li> -->
+    <li><a href="players.html">Add Players</a></li>
+    <li><a href="stats.html">Add Statistics</a></li>
+  </ul>
+    <br><br>
+  <h2 style="color:#FFFFFF; margin-top: 0px; margin-bottom:0px">Input Player Information</h2>
 
   <form id="playerForm" action="/action_page.php">
     First name: <input type="text" name="fname" id = "f"><br>
     Last name: <input type="text" name="lname" id = "l"><br>
     Height: <input type="text" name="height" id = "h"><br>
-    Team: <input type="text" name="team" id = "t">
-    <br>
-	<span id = link><a><button type="submit" id="submit-form" onclick = "clickedSubmit();">Submit</button></a></span>
-
+    Team: <input type="text" name="team" id = "t"><br><br>
+	<span id = link><a><button type="submit"id="submit-form" onclick = "inputPlayer()">Submit</button></a></span>
   </form>
   
   <p id = "test"></p>
   <script>
-  document.getElementById("t").addEventListener("mouseout", inputPlayer);
-  document.getElementById("submit-form").addEventListener("mouseenter", inputPlayer);
-  document.getElementById("submit-form").addEventListener("mouseover", inputPlayer);
-  
-  // function clickedSubmit()
-  // {
-  //   var user_choice = window.confirm('Are you sure you want to submit?');
-  //   if(user_choice==true) 
-  //   {
-  //     inputPlayer();
-  //   } 
-  //   else 
-  //   {
-  //   return false;
-  //   }
-  // }
-
+	   document.getElementById("f").addEventListener("keyup", inputStats);
+	   document.getElementById("l").addEventListener("keyup", inputStats);
+	   document.getElementById("f").addEventListener("mouseout", inputStats);
+	   document.getElementById("f").addEventListener("mouseleave", inputStats);
+	   document.getElementById("l").addEventListener("mouseout", inputStats);
+	   document.getElementById("l").addEventListener("mouseleave", inputStats);
+	   document.getElementById("t").addEventListener("mouseover", inputStats);
+	   document.getElementById("submit-form").addEventListener("mouseenter", inputStats);
+	   document.getElementById("submit-form").addEventListener("mouseover", inputStats);
   function inputPlayer() {
     var player = document.getElementById( "playerForm" );
     var textTest = "https://script.google.com/macros/s/AKfycbyVW6oOUNiSrqZneU9L3WYZ6R28Tcfy32myHMv4gGOFImmxc7M/exec?fname=";
@@ -69,7 +82,6 @@
 	document.getElementById('link').innerHTML = '<a href="' + textTest + '" target = "_blank"><button type="submit"id="submit-form" onclick = "inputPlayer()">Submit</button></a>';
    }
   </script>
-</main>
-</body>
+
 
 </html>
