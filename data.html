@@ -1,103 +1,31 @@
 <html>
-  <link rel="stylesheet" href="css/main.css">
-  <head></head>
+  <head>
+    <title>Data</title>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+  </head>
   <body>
-    <!--
-    BEFORE RUNNING:
-    ---------------
-    1. If not already done, enable the Google Sheets API
-       and check the quota for your project at
-       https://console.developers.google.com/apis/api/sheets
-    2. Get access keys for your application. See
-       https://developers.google.com/api-client-library/javascript/start/start-js#get-access-keys-for-your-application
-    3. For additional information on authentication, see
-       https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
-    -->
-	<!--
-    <script>
-    function makeApiCall() {
-      var params = {
-        // The ID of the spreadsheet to retrieve data from.
-        spreadsheetId: '1Y4-AdSJEb1q8eRClrCRwYhaV8S2qL-k2p-iY1XSqUrI',  // TODO: Update placeholder value.
 
-        // The A1 notation of the values to retrieve.
-        range: 'Sheet1',  // TODO: Update placeholder value.
+  <header>
+    <h1>Gainesville Basketball Association Fantasy League</h1>
+  </header>
 
-        // How values should be represented in the output.
-        // The default render option is ValueRenderOption.FORMATTED_VALUE.
-        //valueRenderOption: '',  // TODO: Update placeholder value.
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <!-- <li><a href="login.html">Log-In</a></li> -->
+      <li><a href="players.html">Add Players</a></li>
+      <li><a href="stats.html">Add Statistics</a></li>
+        <li><a href="data.html">Player Data</a></li>
+      <li><a href="scoringTemplate.html">Scoring Template</a></li>
+    </ul>
+  </nav>
 
-        // How dates, times, and durations should be represented in the output.
-        // This is ignored if value_render_option is
-        // FORMATTED_VALUE.
-        // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
-        //dateTimeRenderOption: '',  // TODO: Update placeholder value.
-      };
-
-      var request = gapi.client.sheets.spreadsheets.values.get(params);
-      request.then(function(response) {
-        // TODO: Change code below to process the `response` object:
-        console.log(response.result);
-      }, function(reason) {
-        console.error('error: ' + reason.result.error.message);
-      });
-    }
-
-    function initClient() {
-      var API_KEY = 'AIzaSyDwq2ZZJj3I2kBRBWzCRUxRkvQTzphBjZ0';  // TODO: Update placeholder with desired API key.
-
-      var CLIENT_ID = '380741963099-rc344on9q1mrmh78b6bhm8h7l7fb0j7u.apps.googleusercontent.com';  // TODO: Update placeholder with desired client ID.
-
-      // TODO: Authorize using one of the following scopes:
-      //   'https://www.googleapis.com/auth/drive'
-      //   'https://www.googleapis.com/auth/drive.file'
-      //   'https://www.googleapis.com/auth/drive.readonly'
-      //   'https://www.googleapis.com/auth/spreadsheets'
-      //   'https://www.googleapis.com/auth/spreadsheets.readonly'
-      var SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
-
-      gapi.client.init({
-        'apiKey': API_KEY,
-        'clientId': CLIENT_ID,
-        'scope': SCOPE,
-        'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-      }).then(function() {
-        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
-        updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-      });
-    }
-
-    function handleClientLoad() {
-      gapi.load('client:auth2', initClient);
-    }
-
-    function updateSignInStatus(isSignedIn) {
-      if (isSignedIn) {
-        makeApiCall();
-      }
-    }
-
-    function handleSignInClick(event) {
-      gapi.auth2.getAuthInstance().signIn();
-    }
-
-    function handleSignOutClick(event) {
-      gapi.auth2.getAuthInstance().signOut();
-    }
-    </script>
-    <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-    <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
-    <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-  </body>
-  -->
+  <main>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="p5.js" type="text/javascript"></script>
-   <!--<p id = "p1">"getData()"</p>-->
    
-   <table style="width:100%">
+   <table>
   <tr>
     <th>Name</th>
     <th>Points</th> 
@@ -202,8 +130,17 @@
     <td id = "E12">-</td>
 	<td id = "F12">-</td> 
   </tr>
+
+       <tr>
+           <td id = "A13">-</td>
+           <td id = "B13">-</td>
+           <td id = "C13">-</td>
+           <td id = "D13">-</td>
+           <td id = "E13">-</td>
+           <td id = "F13">-</td>
+       </tr>
 </table>
-   
+
    <script type="text/javascript" language="javascript">
 		const prefix = "https://spreadsheets.google.com/feeds/list/";
 		const sheetId = "1Y4-AdSJEb1q8eRClrCRwYhaV8S2qL-k2p-iY1XSqUrI";
@@ -214,20 +151,6 @@
 		$.getJSON(spreadsheetUrl, function(data){
 			console.log(data);
 			var i;
-			/*
-			var text = "";
-			for (i = 0; i < data.feed.entry.length; i++) { 
-				text += data.feed.entry[i].gsx$playername.$t + " ";
-				text += data.feed.entry[i].gsx$dateofgame.$t + " ";
-				text += data.feed.entry[i].gsx$points.$t + " ";
-				text += data.feed.entry[i].gsx$reb.$t + " ";
-				text += data.feed.entry[i].gsx$ass.$t + " ";
-				text += data.feed.entry[i].gsx$bm.$t + "\n";
-			}
-			
-			console.log(text);
-			document.getElementById("p1").innerHTML = text;
-			*/
 			getPlayers();
 			var x;
 			console.log(arr);
@@ -322,40 +245,6 @@
 			
 		}
 	</script>
-
-<!--
-	<script>
-		var x = 0;
-
-var spaceData;
-
-function setup() {
-  createCanvas(200, 200);
-  loadJSON("https://spreadsheets.google.com/feeds/list/1Y4-AdSJEb1q8eRClrCRwYhaV8S2qL-k2p-iY1XSqUrI/od6/public/values?alt=json", gotData, 'jsonp');
-}
-
-function gotData(data) {
-  spaceData = data;
-}
-
-function draw() {
-  background(0);
-  
-  if (spaceData) {
-    randomSeed(4);
-    for (var i = 0; i < spaceData.number; i++) {
-      fill(255);
-      ellipse(random(width), random(height), 16, 16);
-    }
-  }
-
-  stroke(255);
-  line(x, 0, x, height);
-  x = x + 1;
-  if (x > width) {
-    x = 0;
-  }
-}
--->
+</main>
 	</script>
 </html>
