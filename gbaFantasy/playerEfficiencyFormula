@@ -1,0 +1,6 @@
+Mock Player Efficiency Formula:
+
+1. Take the total fantasy points that the player has
+2. Keep a static int variable that keeps track of week of GBA
+3. Fantasy Points/ (static int variable * 100 ) <- Gives a percentage
+4. Compare the efficiency of one player to the cumulative rating of the opposing team.
