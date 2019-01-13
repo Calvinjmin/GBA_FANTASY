@@ -239,7 +239,7 @@
 			}
 			for(i = max; i >= 0; i --){
 				for(x = 0; x < arr.length; x++){
-					if(Number(arr[x][5]) == i){
+					if(parseInt(arr[x][5] / arr[x][6], 10) == i){
 						tabarr[i]++;
 					}
 				}
@@ -248,7 +248,7 @@
 			var points = max;
 			for(i = 1; i < tablelength + 1;){
 				for(x = 0; x < arr.length && tabarr[points] > 0; x ++){
-					if(arr[x][5] == points){
+					if(parseInt(arr[x][5]/arr[x][6]) == points){
 						document.getElementById("A" + i).innerHTML = arr[x][0];
 						document.getElementById("B" + i).innerHTML = (arr[x][1] / arr[x][6]).toFixed(1) + "";
 						document.getElementById("C" + i).innerHTML = (arr[x][2] / arr[x][6]).toFixed(1) + "";
