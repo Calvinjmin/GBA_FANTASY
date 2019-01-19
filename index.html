@@ -36,7 +36,7 @@
     </tr>
     <tr>
       <td class="tg-0lax" id = "A1">-</td>
-      <td class="tg-0lax" id = "B1"><img src = "images/williamsjustin.png"></td>
+      <td class="tg-0lax" id = "B1">-</td>
       <td class="tg-0lax" id = "C1">-</td>
       <td class="tg-0lax" id = "D1">-</td>
       <td class="tg-0lax" id = "E1">-</td>
@@ -45,7 +45,7 @@
     </tr>
     <tr>
       <td class="tg-0lax" id = "A2">-</td>
-      <td class="tg-0lax" id = "B2"><img src = "images/tekampematthew.png"></td>
+      <td class="tg-0lax" id = "B2">-</td>
       <td class="tg-0lax" id = "C2">-</td>
       <td class="tg-0lax" id = "D2">-</td>
       <td class="tg-0lax" id = "E2">-</td>
@@ -54,7 +54,7 @@
     </tr>
     <tr>
       <td class="tg-0lax" id = "A3">-</td>
-      <td class="tg-0lax" id = "B3"><img src = "images/hummelmitchell.png"></td>
+      <td class="tg-0lax" id = "B3">-</td>
       <td class="tg-0lax" id = "C3">-</td>
       <td class="tg-0lax" id = "D3">-</td>
       <td class="tg-0lax" id = "E3">-</td>
@@ -63,7 +63,7 @@
     </tr>
     <tr>
       <td class="tg-0lax" id = "A4">-</td>
-      <td class="tg-0lax" id = "B4"><img src = "images/mincalvin.png"></td>
+      <td class="tg-0lax" id = "B4">-</td>
       <td class="tg-0lax" id = "C4">-</td>
       <td class="tg-0lax" id = "D4">-</td>
       <td class="tg-0lax" id = "E4">-</td>
@@ -72,7 +72,7 @@
     </tr>
     <tr>
       <td class="tg-0lax" id = "A5">-</td>
-      <td class="tg-0lax" id = "B5"><img src = "images/matthewscolton.png"></td>
+      <td class="tg-0lax" id = "B5">-</td>
       <td class="tg-0lax" id = "C5">-</td>
       <td class="tg-0lax" id = "D5">-</td>
       <td class="tg-0lax" id = "E5">-</td>
@@ -214,41 +214,30 @@
 					}
 				}
 			}
-			var max = 0;
-			for(i = 0; i < arr.length; i ++){
-				if(Number(arr[i][5]) > max){
-					max = arr[i][5];
-				}
-			}
-			var tabarr = new Array(max + 1);
-			for(i = 0; i < tabarr.length; i ++){
-					tabarr[i] = 0;
-			}
-			for(i = max; i >= 0; i --){
-				for(x = 0; x < arr.length; x++){
-					if(Number(arr[x][5]) == i){
-						tabarr[i]++;
+			var max = -1;
+			var prevmax = 10000;
+			for(i = 1; i < arr.length + 1;){
+				for(x = 0; x < arr.length; x ++){
+					if((arr[x][5] / arr[x][6]) > max && (arr[x][5] / arr[x][6]) < prevmax){
+						max = (arr[x][5] / arr[x][6]);
 					}
 				}
-			}
-			var tablelength = arr.length;
-			var points = max;
-			for(i = 1; i < 6;){
-				for(x = 0; x < arr.length && tabarr[points] > 0; x ++){
-					if(arr[x][5] == points){
-						document.getElementById("A" + i).innerHTML = arr[x][0];
-						document.getElementById("B" + i).src = "images/" + (arr[x][0].replace(", ", "")).toLowerCase() + ".png";
-						console.log(document.getElementById("B" + i).src);
+				for(x = 0; x < arr.length; x ++){
+					if((arr[x][5] / arr[x][6]) == max){
+						var profilePath = "playerProfiles/" + (arr[x][0].replace(", ", "")).toLowerCase() + ".html"
+						document.getElementById("A" + i).innerHTML = '<a href="'+profilePath+'">'+arr[x][0]+'</a>';
+						var picturePath = "images/" + (arr[x][0].replace(", ", "")).toLowerCase() + ".png";
+						document.getElementById("B" + i).innerHTML='<img src="'+picturePath+'" />';
 						document.getElementById("C" + i).innerHTML = (arr[x][1] / arr[x][6]).toFixed(1) + "";
 						document.getElementById("D" + i).innerHTML = (arr[x][2] / arr[x][6]).toFixed(1) + "";
 						document.getElementById("E" + i).innerHTML = (arr[x][3] / arr[x][6]).toFixed(1) + "";
 						document.getElementById("F" + i).innerHTML = (arr[x][4] / arr[x][6]).toFixed(1) + "";
 						document.getElementById("G" + i).innerHTML = (arr[x][5] / arr[x][6]).toFixed(1) + "";
 						i++;
-						tabarr[points]--;
 					}
 				}
-				points --;
+				prevmax = max;
+				max = -1;
 			}
 				
 		});
